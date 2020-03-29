@@ -29,6 +29,15 @@ body {
   height: 32rem;
 }
 
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+} 
+
+.site-content {
+  flex: 1;
+}
 
 .divider {
   margin: 5rem 0;

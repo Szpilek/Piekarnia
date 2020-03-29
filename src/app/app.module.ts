@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 
 import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -51,7 +50,6 @@ import { TimelineItemComponent } from './timeline-item/timeline-item.component';
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
     BreadCardComponent,
     PanelComponent,
     MapComponent,

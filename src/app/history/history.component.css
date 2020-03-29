@@ -1,19 +1,18 @@
-
 ul.timeline {
-    list-style-type: none;
     position: relative;
     padding-left: 1.5rem;
+    list-style-type: none;
 }
 
 ul.timeline:before {
-    display: inline-block;
-    z-index: 400;
-    position: absolute;
-    background: #000000;
-    content: ' ';
-    border-radius: 1rem;
     height: 100%;
+    z-index: 400;
+    background: #000000;
     left: 16px;
     width: 4px;
+    position: absolute;
+    content: ' ';
+    display: inline-block;
+    border-radius: 1rem;
 }
 

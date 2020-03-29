@@ -9,8 +9,6 @@ export class NavigationService {
   title = 'piekarnia';
   private currentPage: BehaviorSubject<Page> = new BehaviorSubject<Page>(Page.MAIN);
   constructor() {
-    console.log(this.currentPage);
-    console.log("NAV SERVICE CREATED");
    }
 
 

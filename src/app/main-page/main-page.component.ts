@@ -8,9 +8,7 @@ import { NavigationService } from '../navigation.service'
 })
 export class MainPageComponent implements OnInit {
 
-  constructor(private navigationService: NavigationService) {
-    console.log(navigationService);
-  }
+  constructor(private navigationService: NavigationService) {}
 
   changePage(page: string) {
     this.navigationService.changePage(page);
