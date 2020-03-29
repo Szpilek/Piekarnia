@@ -45,6 +45,7 @@ import { AboutComponent } from './about/about.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ContactComponent } from './contact/contact.component';
 import { StarComponent } from './star/star.component';
+import { TimelineItemComponent } from './timeline-item/timeline-item.component';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { StarComponent } from './star/star.component';
     AboutComponent,
     MainPageComponent,
     ContactComponent,
-    StarComponent
+    StarComponent,
+    TimelineItemComponent
   ],
   imports: [
     BrowserModule,
