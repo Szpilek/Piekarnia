@@ -1,14 +1,6 @@
 import { Component } from '@angular/core';
-
-enum Page {
-  BREADS,
-  HISTORY,
-  ABOUT,
-  CONTACT,
-  MAIN
-
-}
-
+import { NavigationService } from './navigation.service'
+import { Page } from "./Page";
 
 @Component({
   selector: 'app-root',
@@ -16,50 +8,32 @@ enum Page {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'piekarnia';
-  currentPage: Page = Page.MAIN;
-  changePage(page: string) {
-    switch (page) {
-      case 'breads':
-        this.currentPage = Page.BREADS;
-        break;
-      case 'history':
-        this.currentPage = Page.HISTORY;
-        break;
-      case 'contact':
-        this.currentPage = Page.CONTACT;
-        break;
-      case 'about':
-        this.currentPage = Page.ABOUT;
-        break;
-      case 'main':
-        this.currentPage = Page.MAIN;
-        break;
-      default:
-        this.currentPage = Page.MAIN;
-        break;
-    }
+  currentPage: Page;
+  constructor(private navigationService: NavigationService) {
+    console.log(navigationService);
+    navigationService.getCurrentPage().subscribe(value => {
+      this.currentPage = value;
+    })
   }
 
-  isCurrentPageMain() {
+  changePage(page: string): void {
+    this.navigationService.changePage(page);
+  }
+  isCurrentPageMain(): boolean {
     return this.currentPage == Page.MAIN;
   }
-
-  isCurrentPageBreads() {
-    return this.currentPage == Page.BREADS;
-  }
-
-  isCurrentPageHistory() {
+  isCurrentPageHistory(): boolean {
     return this.currentPage == Page.HISTORY;
   }
-
-  isCurrentPageContact() {
-    return this.currentPage == Page.CONTACT;
-  }
-
-  isCurrentPageAbout() {
+  isCurrentPageAbout(): boolean {
     return this.currentPage == Page.ABOUT;
   }
 
+  isCurrentPageContact(): boolean {
+    return this.currentPage == Page.CONTACT;
+  }
 
+  isCurrentPageBreads(): boolean {
+    return this.currentPage == Page.BREADS;
+  }
 }

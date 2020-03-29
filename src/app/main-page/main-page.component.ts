@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../navigation.service'
 
 @Component({
   selector: 'app-main-page',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private navigationService: NavigationService) {
+    console.log(navigationService);
+  }
+
+  changePage(page: string) {
+    this.navigationService.changePage(page);
+  }
 
   ngOnInit(): void {
+
   }
 
 }
