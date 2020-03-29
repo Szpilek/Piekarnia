@@ -1,4 +1,4 @@
-li.timeline-item {
+.timeline-item {
     margin: 20px 0;
 }
 
@@ -11,7 +11,7 @@ li.timeline-item {
     left: 2rem;
 }
 
-li.timeline-item::before {
+.timeline-item::before {
     background: #fff;
     content: ' ';
     position: absolute;

@@ -9,9 +9,15 @@ export class BreadCardComponent implements OnInit {
 
   @Input("bread")
   bread: Bread;
-  constructor() { }
+  breadDetailsTitleId: string; 
+  breadDetailsId: string; 
+
+  constructor() { 
+  }
 
   ngOnInit(): void {
+    this.breadDetailsId = 'breadDetails' + this.bread.name;
+    this.breadDetailsTitleId = 'breadDetailsTitle' + this.bread.name;
   }
 
 }

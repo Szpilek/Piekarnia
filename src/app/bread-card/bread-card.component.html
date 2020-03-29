@@ -1,31 +1,31 @@
 <div class="card mb-4 shadow-sm">
-  <img src="assets/Chleb4.png" />
+  <img src="assets/Chleb4.png" alt={{bread.name}}/>
   <div class="card-body">
-    <h3>{{bread.name}}</h3>
+    <h2>{{bread.name}}</h2>
     <p class="card-text">
       Najlepszy chleb jaki istnieje, mąką, woda, sól, lorem ipsum donec sed odio dui. Etiam porta sem malesuada magna
       mollis euismod.</p>
     <div class="d-flex justify-content-between align-items-center">
       <div class="btn-group">
         <a class="btn btn-primary btn-lg disabled " aria-disabled="true">{{bread.price}} PLN</a>
-        <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#breadDetails">
+        <button type="button" class="btn btn-primary " data-toggle="modal" attr.data-target="#{{breadDetailsId}}">
           Detale
         </button>
       </div>
     </div>
   </div>
 </div>
-<div class="modal fade" id="breadDetails" tabindex="-1" role="dialog" aria-labelledby="breadDetailsTitle"
+<div class="modal fade" id="{{breadDetailsId}}" tabindex="-1" role="dialog" attr.aria-labelledby="{{breadDetailsTitleId}}"
   aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="breadDetailsTitle">{{bread.name}}</h5>
+        <h5 class="modal-title" id="{{breadDetailsTitleId}}">{{bread.name}}</h5>
       </div>
       <div class="modal-body ">
-        <img class=" ml-4" src="assets/Chleb4.png" />
+        <img class=" ml-4" src="assets/Chleb4.png" alt={{bread.name}} />
         <div class="card-body">
-          <h3>{{bread.name}}</h3>
+          <h2>{{bread.name}}</h2>
           <p class="card-text">
             Najlepszy chleb jaki istnieje, mąką, woda, sól, lorem ipsum donec sed odio dui. Etiam porta sem malesuada
             magna

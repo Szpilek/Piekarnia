@@ -1,10 +1,10 @@
-ul.timeline {
+.timeline {
     position: relative;
     padding-left: 1.5rem;
     list-style-type: none;
 }
 
-ul.timeline:before {
+.timeline:before {
     height: 100%;
     z-index: 400;
     background: #000000;
