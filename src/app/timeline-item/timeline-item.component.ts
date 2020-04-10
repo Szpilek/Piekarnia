@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Input} from '@angular/core';
-import {Event} from '../Event'
+import { Input } from '@angular/core';
+import { Event } from '../Event';
 
 @Component({
   selector: 'app-timeline-item',
