@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Input} from '@angular/core';
+import {Event} from '../Event'
+
 @Component({
   selector: 'app-timeline-item',
   templateUrl: './timeline-item.component.html',
@@ -7,8 +9,8 @@ import {Input} from '@angular/core';
 })
 export class TimelineItemComponent implements OnInit {
 
-  @Input("date")
-  date: string;
+  @Input("event")
+  event: Event;
 
   constructor() { }
 

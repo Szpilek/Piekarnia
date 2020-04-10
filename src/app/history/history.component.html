@@ -7,9 +7,9 @@
     <div class="row">
         <div class="col-lg-7 mx-auto">
             <div class="timeline">
-                <app-timeline-item date="maj 1890"></app-timeline-item>
-                <app-timeline-item date="marzec 1950"></app-timeline-item>
-                <app-timeline-item date="czerwiec 2010"></app-timeline-item>
+                <div *ngFor="let event of events">
+                    <app-timeline-item [event]="event"></app-timeline-item>
+                </div>
             </div>
         </div>
     </div>

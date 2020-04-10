@@ -1,6 +1,6 @@
 <div class="timeline-item bg-white rounded ml-3 p-4 shadow">
     <div class="timeline-arrow"></div>
-    <h2 class="h5 mb-0">Ważne wydażenie</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>
-        {{date}}</span>
-    <p class="text-small mt-2 font-weight-light">Ważne wydażenie w historii naszej sieci piekarni</p>
+    <h2 class="h5 mb-0">{{event.name}}</h2><span class="small text-gray"><i class="fa fa-clock-o mr-1"></i>
+        {{event.date | date: 'mediumDate'}}</span>
+    <p class="text-small mt-2 font-weight-light text-justify">{{event.description}}</p>
 </div>
